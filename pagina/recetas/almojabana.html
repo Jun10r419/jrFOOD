@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de Almojábanas</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #fff3e0, #ffe0b2);
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            background: rgba(255, 165, 0, 0.9);
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Mantiene el header fijo en la parte superior */
+            width: 100%; /* Asegura que el header ocupe todo el ancho */
+            top: 0; /* Posiciona el header en la parte superior */
+            z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 100px auto; /* Agrega margen superior para evitar que el contenido quede detrás del header */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Blanco con transparencia */
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d35400;
+        }
+
+        .receta-img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            display: block;
+            margin: 10px auto; /* Centrar la imagen */
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #d35400;
+            display: block; /* Asegura que se centre bien */
+            padding-bottom: 5px;
+            margin: 20px auto;
+            text-align: center; /* Centrar el título */
+        }
+
+        ul, ol {
+            text-align: left;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Estilos para el formulario de comentarios y calificaciones */
+        .star-rating {
+            direction: rtl; /* Para que las estrellas se muestren de derecha a izquierda */
+            display: inline-block;
+            margin: 10px 0; /* Espacio entre las estrellas y el textarea */
+        }
+
+        .star-rating input {
+            display: none; /* Oculta los botones de radio */
+        }
+
+        .star-rating label {
+            font-size: 30px; /* Tamaño de las estrellas */
+            color: gray; /* Color de las estrellas no seleccionadas */
+            cursor: pointer; /* Cambia el cursor al pasar sobre las estrellas */
+        }
+
+        .star-rating input:checked ~ label {
+            color: gold; /* Color de las estrellas seleccionadas */
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: gold; /* Color de las estrellas al pasar el mouse */
+        }
+
+        #commentForm {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #commentForm textarea {
+            width: 90%;
+            height: 80px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #commentForm button {
+            background-color: #d35400;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #commentForm button:hover {
+            background-color: #e67e22;
+        }
+
+        #commentsContainer {
+            max-width: 90%;
+            margin: 15px auto;
+            text-align: left;
+        }
+
+        .comment {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Receta de Almojábanas
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../desayuno.html">Desayuno</a></li>
+                <li><a href="../almuerzo.html">Almuerzo</a></li>
+                <li><a href="../cena.html">Cena</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Receta de Almojábanas</h1>
+        
+        <img src="/images/almojabana.jpeg" alt="Almojábanas" class="receta-img"> <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+        
+        <h2>Ingredientes</h2>
+        <ul>
+            <li>2 tazas de harina de maíz precocida</li>
+            <li>1 taza de queso fresco rallado</li>
+            <li>1/2 taza de leche</li>
+            <li>1/4 de taza de mantequilla derretida</li>
+            <li>1 cucharadita de sal</li>
+            <li>1 cucharadita de polvo de hornear</li>
+        </ul>
+
+        <h2>Instrucciones</h2>
+        <ol>
+            <li>Precalienta el horno a 180°C (350°F).</li>
+            <li>En un recipiente, mezcla la harina de maíz, el polvo de hornear y la sal.</li>
+            <li>Agrega el queso rallado, la leche y la mantequilla derretida. Mezcla bien hasta obtener una masa homogénea.</li>
+            <li>Forma bolitas con la masa y colócalas en una bandeja para hornear.</li>
+            <li>Hornea durante 20-25 minutos o hasta que estén doradas.</li>
+            <li>Sirve caliente y disfruta de tus almojábanas.</li>
+        </ol>
+
+        <h2>Comentarios y Calificaciones</h2>
+        <form id="commentForm">
+            <textarea name="comment" placeholder="Deja tu comentario aquí..." required></textarea>
+            <div class="star-rating">
+                <input type="radio" name="rating" value="5" id="star5"><label for="star5">★</label>
+                <input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label>
+                <input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label>
+                <input type="radio" name="rating" value="2" id="star2"><label for="star2">★</label>
+                <input type="radio" name="rating" value="1" id="star1"><label for="star1">★</label>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="commentsContainer"></div>
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cargar comentarios guardados
+            const commentsContainer = document.getElementById('commentsContainer');
+            const comments = JSON.parse(localStorage.getItem('almojabanasComments')) || [];
+            comments.forEach(renderComment);
+            
+            // Manejar envío del formulario
+            document.getElementById('commentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const form = this;
+                const comment = form.querySelector('textarea[name="comment"]').value;
+                const rating = form.querySelector('input[name="rating"]:checked');
+                
+                if (!comment || !rating) {
+                    alert('Por favor, escribe un comentario y selecciona una calificación.');
+                    return;
+                }
+                
+                // Guardar y mostrar comentario
+                const newComment = {
+                    text: comment,
+                    rating: rating.value,
+                    date: new Date().toLocaleDateString()
+                };
+                
+                comments.push(newComment);
+                localStorage.setItem('almojabanasComments', JSON.stringify(comments));
+                renderComment(newComment);
+                form.reset();
+            });
+            
+            // Función para renderizar un comentario
+            function renderComment(comment) {
+                const div = document.createElement('div');
+                div.className = 'comment';
+                
+                let stars = '';
+                for (let i = 1; i <= 5; i++) {
+                    stars += i <= comment.rating ? '★' : '☆';
+                }
+                
+                div.innerHTML = `
+                    <p><strong>Calificación:</strong> <span style="color:gold">${stars}</span></p>
+                    <p>${comment.text}</p>
+                    <small>Publicado el: ${comment.date}</small>
+                `;
+                
+                commentsContainer.appendChild(div);
+            }
+        });
+        </script>
+    </div>
+</body>
+</html>

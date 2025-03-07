@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de Pizza</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #fff3e0, #ffe0b2);
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            background: rgba(255, 165, 0, 0.9);
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d35400;
+        }
+
+        .receta-img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #d35400;
+            display: block;
+            padding-bottom: 5px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        ul, ol {
+            text-align: left;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Estilos para el formulario de comentarios y calificaciones */
+        .star-rating {
+            direction: rtl;
+            display: inline-block;
+            margin: 10px 0; /* Espacio entre las estrellas y el textarea */
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 30px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .star-rating input:checked ~ label {
+            color: gold;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: gold;
+        }
+
+        #commentForm {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #commentForm textarea {
+            width: 90%;
+            height: 80px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #commentForm button {
+            background-color: #d35400;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #commentForm button:hover {
+            background-color: #e67e22;
+        }
+
+        #commentsContainer {
+            max-width: 90%;
+            margin: 15px auto;
+            text-align: left;
+        }
+
+        .comment {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Receta de Pizza
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../desayuno.html">Desayuno</a></li>
+                <li><a href="../almuerzo.html">Almuerzo</a></li>
+                <li><a href="../cena.html">Cena</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Receta de Pizza</h1>
+        
+        <img src="../images/pizza.jpeg" alt="Pizza" class="receta-img">
+        
+        <h2>Ingredientes</h2>
+        <ul>
+            <li>2 tazas de harina de trigo</li>
+            <li>1 cucharadita de sal</li>
+            <li>1 cucharadita de azúcar</li>
+            <li>1 cucharada de levadura seca</li>
+            <li>3/4 taza de agua tibia</li>
+            <li>2 cucharadas de aceite de oliva</li>
+            <li>1 taza de salsa de tomate</li>
+            <li>2 tazas de queso mozzarella rallado</li>
+            <li>Ingredientes al gusto (pepperoni, champiñones, pimientos, etc.)</li>
+        </ul>
+
+        <h2>Instrucciones</h2>
+        <ol>
+            <li>En un tazón grande, mezcla la harina, la sal, el azúcar y la levadura.</li>
+            <li>Agrega el agua tibia y el aceite de oliva. Mezcla hasta formar una masa.</li>
+            <li>Amasa la masa durante unos 5-10 minutos hasta que esté suave y elástica.</li>
+            <li>Coloca la masa en un tazón engrasado, cúbrela con un paño y déjala reposar en un lugar cálido durante 1 hora, o hasta que duplique su tamaño.</li>
+            <li>Precalienta el horno a 220°C (425°F).</li>
+            <li>Estira la masa sobre una superficie enharinada hasta obtener el grosor deseado.</li>
+            <li>Coloca la masa en una bandeja para hornear y extiende la salsa de tomate sobre la base.</li>
+            <li>Agrega el queso mozzarella y los ingredientes que desees.</li>
+            <li>Hornea durante 15-20 minutos, o hasta que la masa esté dorada y el queso burbujeante.</li>
+            <li>Retira del horno, deja enfriar un poco, corta en porciones y sirve.</li>
+        </ol>
+    
+        <h2>Comentarios y Calificaciones</h2>
+        <form id="commentForm">
+            <textarea name="comment" placeholder="Deja tu comentario aquí..." required></textarea>
+            <div class="star-rating">
+                <input type="radio" name="rating" value="5" id="star5"><label for="star5">★</label>
+                <input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label>
+                <input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label>
+                <input type="radio" name="rating" value="2" id="star2"><label for="star2">★</label>
+                <input type="radio" name="rating" value="1" id="star1"><label for="star1">★</label>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="commentsContainer"></div>
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cargar comentarios guardados
+            const commentsContainer = document.getElementById('commentsContainer');
+            const comments = JSON.parse(localStorage.getItem('pizzaComments')) || [];
+            comments.forEach(renderComment);
+            
+            // Manejar envío del formulario
+            document.getElementById('commentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const form = this;
+                const comment = form.querySelector('textarea[name="comment"]').value;
+                const rating = form.querySelector('input[name="rating"]:checked');
+                
+                if (!comment || !rating) {
+                    alert('Por favor, escribe un comentario y selecciona una calificación.');
+                    return;
+                }
+                
+                // Guardar y mostrar comentario
+                const newComment = {
+                    text: comment,
+                    rating: rating.value,
+                    date: new Date().toLocaleDateString()
+                };
+                
+                comments.push(newComment);
+                localStorage.setItem('pizzaComments', JSON.stringify(comments));
+                renderComment(newComment);
+                form.reset();
+            });
+            
+            // Función para renderizar un comentario
+            function renderComment(comment) {
+                const div = document.createElement('div');
+                div.className = 'comment';
+                
+                let stars = '';
+                for (let i = 1; i <= 5; i++) {
+                    stars += i <= comment.rating ? '★' : '☆';
+                }
+                
+                div.innerHTML = `
+                    <p><strong>Calificación:</strong> <span style="color:gold">${stars}</span></p>
+                    <p>${comment.text}</p>
+                    <small>Publicado el: ${comment.date}</small>
+                `;
+                
+                commentsContainer.appendChild(div);
+            }
+        });
+        </script>
+    </div>
+</body>
+</html>
