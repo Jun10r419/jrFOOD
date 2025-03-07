@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de Ramen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #fff3e0, #ffe0b2);
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            background: rgba(255, 165, 0, 0.9);
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Mantiene el header fijo en la parte superior */
+            width: 100%; /* Asegura que el header ocupe todo el ancho */
+            top: 0; /* Posiciona el header en la parte superior */
+            z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 100px auto; /* Agrega margen superior para evitar que el contenido quede detrás del header */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Blanco con transparencia */
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d35400;
+        }
+
+        .receta-img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            display: block;
+            margin: 10px auto; /* Centrar la imagen */
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #d35400;
+            display: block; /* Asegura que se centre bien */
+            padding-bottom: 5px;
+            margin: 20px auto;
+            text-align: center; /* Centrar el título */
+        }
+
+        ul, ol {
+            text-align: left;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Estilos para el formulario de comentarios y calificaciones */
+        .star-rating {
+            direction: rtl; /* Para que las estrellas se muestren de derecha a izquierda */
+            display: inline-block;
+        }
+
+        .star-rating input {
+            display: none; /* Oculta los botones de radio */
+        }
+
+        .star-rating label {
+            font-size: 30px; /* Tamaño de las estrellas */
+            color: gray; /* Color de las estrellas no seleccionadas */
+            cursor: pointer; /* Cambia el cursor al pasar sobre las estrellas */
+        }
+
+        .star-rating input:checked ~ label {
+            color: gold; /* Color de las estrellas seleccionadas */
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: gold; /* Color de las estrellas al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Receta de Ramen
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../desayuno.html">Desayuno</a></li>
+                <li><a href="../almuerzo.html">Almuerzo</a></li>
+                <li><a href="../cena.html">Cena</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Receta de Ramen</h1>
+        
+        <img src="../images/ramen.jpeg" alt="Ramen" class="receta-img"> <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+        
+        <h2>Ingredientes</h2>
+        <ul>
+            <li>200 g de fideos de ramen</li>
+            <li>4 tazas de caldo de pollo o cerdo</li>
+            <li>2 cucharadas de salsa de soja</li>
+            <li>1 cucharada de miso (opcional)</li>
+            <li>2 huevos</li>
+            <li>100 g de carne de cerdo (chashu) o pollo, cocido y en rodajas</li>
+            <li>1 cebolla verde, picada</li>
+            <li>Alga nori, cortada en tiras</li>
+            <li>Brotes de bambú (menma) al gusto</li>
+            <li>Semillas de sésamo (opcional)</li>
+        </ul>
+
+        <h2>Instrucciones</h2>
+        <ol>
+            <li>En una olla grande, lleva el caldo a ebullición.</li>
+            <li>Agrega la salsa de soja y el miso (si lo usas) al caldo y mezcla bien.</li>
+            <li>En otra olla, cocina los fideos de ramen según las instrucciones del paquete. Escurre y reserva.</li>
+            <li>En una cacerola pequeña, hierve agua y cocina los huevos durante 6-7 minutos. Luego, enfríalos en agua fría, pélalos y córtalos por la mitad.</li>
+            <li>En tazones individuales, coloca una porción de fideos de ramen.</li>
+            <li>Vierte el caldo caliente sobre los fideos.</li>
+            <li>Agrega las rodajas de carne, los huevos, la cebolla verde, el alga nori y los brotes de bambú.</li>
+            <li>Decora con semillas de sésamo si lo deseas y sirve caliente.</li>
+        </ol>
+
+        <h2>Comentarios y Calificaciones</h2>
+        <form id="commentForm">
+            <textarea placeholder="Deja tu comentario aquí..." required></textarea>
+            <div class="star-rating">
+                <input type="radio" name="rating" value="5" id="star5"><label for="star5">★</label>
+                <input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label>
+                <input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label

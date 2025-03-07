@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de Arepas con Queso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #fff3e0, #ffe0b2);
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            background: rgba(255, 165, 0, 0.9);
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Mantiene el header fijo en la parte superior */
+            width: 100%; /* Asegura que el header ocupe todo el ancho */
+            top: 0; /* Posiciona el header en la parte superior */
+            z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 100px auto; /* Agrega margen superior para evitar que el contenido quede detrás del header */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Blanco con transparencia */
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d35400;
+        }
+
+        .receta-img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            display: block;
+            margin: 10px auto; /* Centrar la imagen */
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #d35400;
+            display: block; /* Asegura que se centre bien */
+            padding-bottom: 5px;
+            margin: 20px auto;
+            text-align: center; /* Centrar el título */
+        }
+
+        ul, ol {
+            text-align: left;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Receta de Arepas con Queso
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../desayuno.html">Desayuno</a></li>
+                <li><a href="../almuerzo.html">Almuerzo</a></li>
+                <li><a href="../cena.html">Cena</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Receta de Arepas con Queso</h1>
+        
+        <img src="../images/arepa.jpeg" alt="Arepas con Queso" class="receta-img"> <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+        
+        <h2>Ingredientes</h2>
+        <ul>
+            <li>2 tazas de harina de maíz precocida</li>
+            <li>2 tazas de agua tibia</li>
+            <li>1 cucharadita de sal</li>
+            <li>1 taza de queso rallado (puede ser queso blanco, mozzarella o el de tu preferencia)</li>
+            <li>Mantequilla o aceite (para cocinar)</li>
+        </ul>
+
+        <h2>Instrucciones</h2>
+        <ol>
+            <li>Mezcla en un recipiente harina de maíz, una pizca de sal y agua tibia.</li>
+            <li>Amasa hasta obtener una masa suave y sin grumos.</li>
+            <li>Agrega queso rallado y sigue amasando hasta que se integre bien.</li>
+            <li>Forma bolas con la masa y aplánalas para darles forma de arepa.</li>
+            <li>Coloca en una sartén o plancha y cocina las arepas a fuego medio hasta que estén doradas por ambos lados.</li>
+            <li>Si deseas, ábrelas por la mitad y añade más queso para que se derrita con el calor.</li>
+            <li>Sirve caliente y disfruta con mantequilla o una bebida de tu elección.</li>
+        </ol>
+
+
+    <h2>Comentarios y Calificaciones</h2>
+    <form id="commentForm">
+        <textarea placeholder="Deja tu comentario aquí..." required></textarea>
+        <div class="star-rating">
+            <input type="radio" name="rating" value="5" id="star5"><label for="star5">★</label>
+            <input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label>
+            <input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label
